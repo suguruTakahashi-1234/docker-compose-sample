@@ -1,0 +1,29 @@
+version: '3.8'
+
+services:
+
+  # PHP Apache
+  php-apache:
+    build: ./config/php
+    ports:
+      - "8080:80"
+    volumes:
+      - ./html:/var/www/html
+    restart: always
+    depends_on:
+      - mysql
+
+  # MySQL
+  mysql:
+    build: ./config/mysql
+    ports:
+      - 3306:3306
+    volumes:
+      - ./config/mysql/initdb.d:/docker-entrypoint-initdb.d
+      - ./data:/var/lib/mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: sample_root_passward
+      MYSQL_DATABASE: sample_db
+      MYSQL_USER: sample_user
+      MYSQL_PASSWORD: sample_pass

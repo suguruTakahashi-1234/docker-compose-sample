@@ -6,7 +6,7 @@ services:
   php-apache:
     build: ./config/php
     ports:
-      - "8080:80"
+      - 8080:80
     volumes:
       - ./html:/var/www/html
     restart: always

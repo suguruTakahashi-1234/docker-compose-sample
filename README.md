@@ -3,7 +3,6 @@
 ## Architecture
 
 ![](./reference/architecture.drawio.svg)
-![](./reference/RoofScanner-ios.svg)
 
 ## Requirement
 

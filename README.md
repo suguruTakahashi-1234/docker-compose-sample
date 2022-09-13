@@ -88,3 +88,8 @@ Name   Command   State   Ports
 $ docker image ls
 REPOSITORY   TAG       IMAGE ID   CREATED   SIZE
 ```
+
+
+### Infrastructure model
+
+![Infrastructure model](.infragenie/infrastructure_model.png)
